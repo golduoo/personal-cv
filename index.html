@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>钱冠维 | Personal Job-Seeking Website</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>钱冠维</h1>
+      <p class="headline">应聘方向：AI Engineer Intern / 智能体研发工程师实习（LLM 应用、检索增强、多模态、评测与工程化）</p>
+      <p class="tags">Python · PyTorch · LLM · Agent · RAG · Prompt Engineering · Evaluation · AWS</p>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume/CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        你好，我是钱冠维，当前聚焦 AI 工程与智能体应用落地，重点方向为 LLM 应用开发、RAG 检索增强、多模态问答与自动化评测。<br>
+        我具备扎实的 Python / PyTorch 工程能力，能独立完成从需求拆解、系统设计到实验验证和可视化交付的完整闭环。<br>
+        我在项目中持续实践 Prompt 优化、检索策略融合、模型集成与稳定性保障，关注“可上线、可评估、可迭代”的工程结果。<br>
+        我希望在 AI Engineer Intern 岗位参与真实业务场景，推进智能体与 LLM 系统在生产环境中的落地。<br>
+        目前工作年限为应届阶段（无全职工作年限），可快速进入研发协作并承担模块级交付。
+      </p>
+      <ul>
+        <li>教育背景（本科）：宁波工程学院，信息与计算科学，2020-09 至 2024-06（GPA：3.59/4）</li>
+        <li>教育背景（硕士）：香港岭南大学，人工智能与商业分析，2025-09 至今</li>
+        <li>相关课程与方向：数据分析、概率论、机器学习、深度学习、计算机视觉、生成式人工智能、商业数据管理</li>
+        <li>基本信息：男，出生年月 2002-06，籍贯杭州</li>
+        <li>优势 1：可独立完成 LLM/RAG 系统开发、调优、评测与可视化展示</li>
+        <li>优势 2：具备 Prompt Engineering 与 AI Evaluation 经验，能用指标驱动迭代</li>
+        <li>优势 3：兼具算法理解与工程实现能力，能在团队中承担核心技术模块</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div>
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Python / PyTorch（模型开发、训练与实验管理）</li>
+            <li>LLM 应用开发（Prompt Engineering、API 集成、错误处理与稳定性）</li>
+            <li>RAG 与检索（Dense Retrieval、BM25、RRF 融合、Cross-Encoder 重排）</li>
+            <li>多模态能力（图文特征建模、Vision LLM、跨模态检索）</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Business Skills</h3>
+          <ul>
+            <li>需求拆解与场景建模（从业务目标到 AI 可执行任务）</li>
+            <li>AI 评测体系搭建（Hit Rate、MRR、Faithfulness、Relevancy）</li>
+            <li>Prompt/A-B 测试与回归测试流程设计</li>
+            <li>技术结果表达与跨团队协作沟通</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul>
+            <li>LangChain / MCP / ChromaDB / FAISS / Ragas</li>
+            <li>OpenAI / Gemini / Claude / DeepSeek / Ollama / Azure OpenAI</li>
+            <li>AWS（Lambda、DynamoDB、SES，按岗位场景持续实践）</li>
+            <li>Git / GitHub</li>
+            <li>Streamlit / Jupyter Notebook</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects (Portfolio)</h2>
+
+      <article class="project">
+        <h3>项目 1：Modular RAG MCP Server（个人项目） | 2026-01 至今</h3>
+        <p><strong>Problem：</strong>面向 Agent 工具链落地场景，解决 RAG 组件接入成本高、协议不统一、跨平台复用困难的问题。</p>
+        <p><strong>Data：</strong>使用多源文档库（文本与图片）构建知识检索数据集，并设计 5 条标准化测试用例用于离线评测。</p>
+        <p><strong>Approach：</strong>基于 MCP 协议将检索能力封装为标准 Tool，支持 Claude Desktop / Cursor 直接调用；检索层采用 Dense + BM25 双路召回、RRF 融合与 Cross-Encoder 重排；构建多模态 RAG Pipeline（Vision LLM 图像语义描述 + 图文混合返回）；设计 Provider 抽象层（Factory + Strategy）以 YAML 一键切换 OpenAI / DeepSeek / Ollama / Azure 与不同 VectorStore 后端；基于 Ragas + Streamlit 搭建自动化评测与可视化 Dashboard。</p>
+        <p><strong>Outcome/Impact：</strong>在 5 条测试用例上，混合检索 Hit Rate 达 100%，MRR 达 0.52（top-10）；实现可插拔、可评测、可观测的模块化 RAG 中间件，显著降低 Agent 侧接入与迭代成本。</p>
+        <p><strong>Your Contribution：</strong>独立完成架构设计、检索策略实现、多模态链路开发、评测体系搭建与可视化交付。</p>
+        <p><strong>Tech Stack：</strong>Python · MCP · ChromaDB · BM25 · LangChain · Ragas · Streamlit</p>
+        <p><strong>Link（可选）：</strong><a href="#">GitHub 链接（待补充）</a></p>
+      </article>
+
+      <article class="project">
+        <h3>项目 2：基于 CLIP + ESE + FAISS 的图文跨模态检索系统（个人项目） | 2026-02 至 2026-03</h3>
+        <p><strong>Problem：</strong>针对跨模态检索中精度与效率难以兼顾的问题，探索低维嵌入下高质量图文匹配方案。</p>
+        <p><strong>Data：</strong>基于 Flickr8k 数据集，使用冻结 CLIP (ViT-B/32) 提取图文特征，并构建图文检索评测集。</p>
+        <p><strong>Approach：</strong>复现 ICLR 2025 ESE（Espresso Sentence Embeddings）中的 Learn-to-Express 与 Learn-to-Compress 双机制；在冻结 CLIP 特征上训练约 2.1M 参数轻量投影网络；将 512 维嵌入压缩至 128 维，并基于 FAISS 构建 Flat 精确索引与 IVF 近似索引。</p>
+        <p><strong>Outcome/Impact：</strong>嵌入压缩后存储与检索开销降低 75%，平均 Recall 保持原始性能 91%（74.72% vs 81.68%）；在同为 128 维条件下，相比直接截断，Text-to-Image R@5 提升 33%，Image-to-Text R@1 提升 28%；支持毫秒级大规模图文检索。</p>
+        <p><strong>Your Contribution：</strong>独立完成论文复现、训练流程实现、压缩对齐实验设计与 FAISS 检索系统搭建。</p>
+        <p><strong>Tech Stack：</strong>PyTorch · OpenCLIP · FAISS</p>
+        <p><strong>Link（可选）：</strong><a href="#">GitHub 链接（待补充）</a></p>
+      </article>
+
+      <article class="project">
+        <h3>项目 3：智能驾驶员监控系统（团队项目） | 2022-06 至 2022-11</h3>
+        <p><strong>Problem：</strong>面向行驶安全场景，实时识别驾驶员疲劳、分心与生理风险，降低事故风险。</p>
+        <p><strong>Data：</strong>基于车内摄像头视频流采集驾驶行为与面部生理信号，构建多模态状态监测数据。</p>
+        <p><strong>Approach：</strong>融合疲劳、分心、情绪、血压与心率等多维度指标进行安全评估；使用人眼变化曲线与 PERCLOS 准则检测疲劳状态；结合血红蛋白光吸收特性实现视频无接触生理信号测量。</p>
+        <p><strong>Outcome/Impact：</strong>项目获“互联网+”国际赛道金奖，产出团队专利 1 项、软件著作权 5 项。</p>
+        <p><strong>Your Contribution：</strong>负责算法方案落地、核心模块实现与系统联调（可按你真实分工进一步细化）。</p>
+        <p><strong>Tech Stack：</strong>Python · OpenCV · PyTorch · PERCLOS · 血红蛋白光吸收检测</p>
+        <p><strong>Link（可选）：</strong><a href="#">成果链接（待补充）</a></p>
+      </article>
+    </section>
+
+    <section id="resume" class="card">
+      <h2>Resume / CV</h2>
+      <p>简历链接（在线查看）：</p>
+      <p><a href="https://www.qmjianli.com/cvs/26322H4D1UQRIC8WR" target="_blank" rel="noopener noreferrer">钱冠维的在线简历</a></p>
+      <p>你也可以在这里放简历精简版（Education / Experience / Projects）。</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email（必填）：<a href="mailto:s954591610@gmail.com">s954591610@gmail.com</a></li>
+        <li>联系电话：19883087643</li>
+        <li>GitHub（可选）：<a href="https://github.com/golduoo">https://github.com/golduoo</a></li>
+        <li>LinkedIn（可选）：<a href="#">待补充</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 钱冠维 · Personal Job-Seeking Website</small>
+    </div>
+  </footer>
+</body>
+</html>
